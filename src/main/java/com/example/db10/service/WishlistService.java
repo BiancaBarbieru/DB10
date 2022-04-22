@@ -19,12 +19,6 @@ public class WishlistService {
         return wishlistRepository.getById(id);
     }
 
-    public List<Wishlist> getAllWishlists(){
-        List<Wishlist> wishlists = new ArrayList<>();
-        wishlistRepository.findAll().iterator().forEachRemaining(wishlists::add);
-        return wishlists;
-    }
-
     public void addWishlist(Wishlist wishlist) {
         wishlistRepository.save(wishlist);
     }

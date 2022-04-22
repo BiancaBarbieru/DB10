@@ -19,12 +19,6 @@ public class CartService {
         return cartRepository.getById(id);
     }
 
-    public List<Cart> getAllCarts(){
-        List<Cart> carts = new ArrayList<>();
-        cartRepository.findAll().iterator().forEachRemaining(carts::add);
-        return carts;
-    }
-
     public void addCart(Cart cart){
     cartRepository.save(cart);
     }
