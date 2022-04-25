@@ -1,6 +1,6 @@
 package com.example.db10.security;
 
-import com.example.db10.filters.JwtRequestFilter;
+import com.example.db10.filters.JWTRequestFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -12,9 +12,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-    private final JwtRequestFilter jwtRequestFilter;
+    private final JWTRequestFilter jwtRequestFilter;
 
-    public SecurityConfiguration(JwtRequestFilter jwtRequestFilter) {
+    public SecurityConfiguration(JWTRequestFilter jwtRequestFilter) {
         this.jwtRequestFilter = jwtRequestFilter;
     }
 
